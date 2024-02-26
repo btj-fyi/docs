@@ -34,3 +34,22 @@ root:1001:1
 https://www.reddit.com/r/Proxmox/comments/jz5ugx/lxc_user_mapping_help/
 https://pve.proxmox.com/wiki/Unprivileged_LXC_containers
 
+
+
+
+
+
+
+
+
+
+
+
+
+I misunderstood the weird behavior with the SMB "Homes" directories. As it turns out those literally are
+the users homes so the non passthrough perms issue is expecteded. 
+
+I can remove that and then go ahead and setup public and private folders in zop and private and public folders in zip.
+
+I probably won't put anything other than games and update in zip.
+
