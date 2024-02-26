@@ -1,0 +1,5 @@
+# Setup Samaba
+- https://medium.com/@sm4rthink/create-samba-server-with-alpine-linux-lxc-container-proxmox-a037b29f5d28
+
+# Creating Users
+- https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server#Creating_a_Basic_authenticated_access_smb.conf_File
