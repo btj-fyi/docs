@@ -3,3 +3,34 @@
 
 # Creating Users
 - https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server#Creating_a_Basic_authenticated_access_smb.conf_File
+
+
+arch: amd64
+cores: 1
+features: nesting=1
+hostname: fileserver
+memory: 512
+mp0: /zop/fileserver,mp=/zop
+net0: name=eth0,bridge=vmbr0,firewall=1,hwaddr=BC:24:11:BC:AF:D3,ip=dhcp,ip6=dhcp,type=veth
+ostype: debian
+rootfs: local-lvm:vm-103-disk-0,size=8G
+swap: 512
+unprivileged: 1
+lxc.idmap: u 0 100000 1001
+lxc.idmap: g 0 100000 1001
+lxc.idmap: u 1001 1001 1
+lxc.idmap: g 1001 1001 1
+lxc.idmap: u 1002 101002 64534
+lxc.idmap: g 1002 101002 64534
+
+uid
+root:100000:65536
+root:1001:1
+
+gid
+root:100000:65536
+root:1001:1
+
+https://www.reddit.com/r/Proxmox/comments/jz5ugx/lxc_user_mapping_help/
+https://pve.proxmox.com/wiki/Unprivileged_LXC_containers
+
